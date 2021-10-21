@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background: white url(./images/bg-pattern-desktop.svg)  no-repeat;
+    background-size:100%;
+    background-position: -400px -20px;
+    width: 70vw;
+    height: auto;
+    display: flex;
+    border-radius: 20px;
+}
+.accordion {
+    border: 2px solid rgb(0, 183, 255);
+    font-weight: 400;
+    font-size: 0.6em;
+}
+
+.logos {
+    border: 2px solid orange;
+    width: 40%;
+    height: auto;
+    background:url(./images/illustration-woman-online-desktop.svg) center no-repeat;
+    background-position: -50px;
+
+}
+
+#lady {
+    width: 20vw;
+}
+
+#box {
+    width: 7vw;
+}
