@@ -12,6 +12,7 @@ body {
     background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     background-repeat: no-repeat;
     font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
 }
 
 main {
@@ -22,33 +23,121 @@ main {
 }
 
 .content {
-    background: white url(./images/bg-pattern-desktop.svg)  no-repeat;
-    background-size:100%;
-    background-position: -400px -20px;
+    background-image: url(./images/bg-pattern-desktop.svg), url(./images/illustration-woman-online-desktop.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: -40vw, -5vw;
+    background-position-y: -20vw, 6vw;
     width: 70vw;
     height: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
+    padding: 5rem;
 }
+
+h1 {
+    margin-bottom: 1em;
+}
+
+h2 {
+    color: hsl(240, 6%, 50%);
+    font-size: 1.5em;
+    padding: 0.5em 0;
+}
+
+.active h2 {
+    font-size: 1.6em;
+    color: hsl(237, 12%, 33%);
+}
+
+p {
+    color: hsl(240, 6%, 50%);
+    width: 50ch;
+    height: 0;
+    overflow: hidden;
+    transform: translatex(100em);
+    transition: 1s;
+    margin-bottom: 1em;
+}
+
+.qa {
+    border-bottom: 1px solid grey;
+}
+
+.active p {
+    transform: translateY(0);
+    overflow: visible;
+    height: initial;
+    transition: 0.5s;
+}
+
 .accordion {
-    border: 2px solid rgb(0, 183, 255);
     font-weight: 400;
-    font-size: 0.6em;
+    font-size: 0.8em;
+    padding: 5em 0;
+    margin-left: 10rem;
+    width: 30vw;
 }
 
-.logos {
-    border: 2px solid orange;
-    width: 40%;
-    height: auto;
-    background:url(./images/illustration-woman-online-desktop.svg) center no-repeat;
-    background-position: -50px;
-
+.question {
+    display: flex;
 }
 
-#lady {
-    width: 20vw;
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
 }
 
-#box {
-    width: 7vw;
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 200px;
+    top: 70px;
+}
+.lady {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+ 
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        background-position: center top;
+        margin: 0;
+        width:80vw;
+    }
+    .accordion {
+        margin: 0;
+        padding: 0;
+        width: 70vw;
+    }
+    .box {
+        display: none;
+
+        
+    }
+    h2 {
+        width: 50ch;
+        font-size: 12px ;
+    }
+    p {
+        width: 35ch;
+    }
+    .lady {
+        display: block;
+        position: relative;
+        bottom: 200px;
+        right: 15px;
+    }
 }
